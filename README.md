@@ -9,8 +9,10 @@
 
 
 ## Description
-This is a package with functionality to compare two JSON-files. To run the games you need to install package dist/hexlet_code-0.1.0-py3-none-any.whl.\n
-Package has API facade and can be used by "import gendiff".\n
+This is a package with functionality to compare two JSON-files. To run the games you need to install package dist/hexlet_code-0.1.0-py3-none-any.whl.
+
+Package has API facade and can be used by "import gendiff".
+
 Use option --help (-h) to know how to use it.
 
 

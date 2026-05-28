@@ -1,8 +1,11 @@
 import json
+
 import yaml
+
 
 # for lowcase boolean values
 def custom_bool_handler(pairs):
+
     return {k: (str(v).lower() if isinstance(v, bool) else v) for k, v in pairs}
 
 
@@ -34,9 +37,12 @@ def generate_diff(file1, file2, _format):
         case 'JSON':
             return json.loads(json.dumps(dict(result), indent=2))
         case 'YAML':
-            return yaml.dump(dict(result, sort_keys=False))
+            return yaml.dump(dict(result), sort_keys=False)
         case _:
-            result_beauty = list(map(lambda item: f"  {item[0]}: {item[1]}", result))
-            return '{\n' + \
-                '\n'.join(result_beauty) + \
-                '\n}'
+            if result:
+                result_beauty = list(
+                        map(lambda item: f"  {item[0]}: {item[1]}", result)
+                    )
+                return '{\n' + '\n'.join(result_beauty) + '\n}'
+            else:
+                return '{}'
