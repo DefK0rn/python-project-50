@@ -21,4 +21,7 @@ check: test lint
 test-coverage:
 	uv run pytest --cov=gendiff --cov-report xml
 
+test-coverage-html:
+	uv run pytest --cov=gendiff --cov-report=html
+
 .PHONY: install gendiff

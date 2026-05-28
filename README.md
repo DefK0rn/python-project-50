@@ -7,6 +7,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DefK0rn_python-project-50&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=DefK0rn_python-project-50)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=DefK0rn_python-project-50&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=DefK0rn_python-project-50)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=DefK0rn_python-project-50&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=DefK0rn_python-project-50)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DefK0rn_python-project-50&metric=coverage)](https://sonarcloud.io/summary/new_code?id=DefK0rn_python-project-50)
 
 
 ## Description
