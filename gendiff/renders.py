@@ -23,6 +23,25 @@ def format_stylish_value(val):
     return val
 
 
+def stringify(value, spaces_count=4):
+
+    if isinstance(value, bool):
+        return str(value).lower()
+    if value is None:
+        return 'null'
+    if not isinstance(value, dict):
+        return str(value)
+
+    current_indent = " " * spaces_count
+    closing_indent = " " * (spaces_count - 4)
+    
+    lines = []
+    for k, v in value.items():
+        lines.append(f"{current_indent}{k}: {stringify(v, spaces_count + 4)}")
+        
+    return "{\n" + "\n".join(lines) + f"\n{closing_indent}}}"
+
+
 def render_plain(diff, path=""):
 
     lines = []
@@ -60,9 +79,11 @@ def render_json(diff):
     return json.dumps(diff, indent=2, ensure_ascii=False)
 
 
-def render_stylish(diff, depth=1):
+def render_stylish(diff, spaces_count=2):
 
-    indent = "  " * depth
+    prefix_indent = " " * spaces_count
+    next_spaces_count = spaces_count + 4
+    stringify_spaces = spaces_count + 2 + 4
     lines = []
 
     for key, node in diff.items():
@@ -70,24 +91,26 @@ def render_stylish(diff, depth=1):
 
         match node_type:
             case 'nested':
-                lines.append(f"{indent}  {key}: {{")
-                lines.append(render_stylish(node['children'], depth + 2))
-                lines.append(f"{indent}  }}")
+                lines.append(f"{prefix_indent}  {key}: {{")
+                lines.append(
+                    render_stylish(node['children'], next_spaces_count)
+                )
+                lines.append(f"{prefix_indent}  }}")
             case 'unchanged':
-                val = format_stylish_value(node['value'])
-                lines.append(f"{indent}  {key}: {val}")
+                val = stringify(node['value'], stringify_spaces)
+                lines.append(f"{prefix_indent}  {key}: {val}")
             case 'added':
-                val = format_stylish_value(node['value'])
-                lines.append(f"{indent}+ {key}: {val}")
+                val = stringify(node['value'], stringify_spaces)
+                lines.append(f"{prefix_indent}+ {key}: {val}")
             case 'removed':
-                val = format_stylish_value(node['value'])
-                lines.append(f"{indent}- {key}: {val}")
+                val = stringify(node['value'], stringify_spaces)
+                lines.append(f"{prefix_indent}- {key}: {val}")
             case 'updated':
-                old_val = format_stylish_value(node['old_value'])
-                new_val = format_stylish_value(node['new_value'])
-                lines.append(f"{indent}- {key}: {old_val}")
-                lines.append(f"{indent}+ {key}: {new_val}")
+                old_val = stringify(node['old_value'], stringify_spaces)
+                new_val = stringify(node['new_value'], stringify_spaces)
+                lines.append(f"{prefix_indent}- {key}: {old_val}")
+                lines.append(f"{prefix_indent}+ {key}: {new_val}")
 
-    if depth == 1:
+    if spaces_count == 2:
         return "{\n" + "\n".join(lines) + "\n}"
     return "\n".join(lines)
