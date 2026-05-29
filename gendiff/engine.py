@@ -1,4 +1,5 @@
 import json
+import re
 
 import yaml
 
@@ -9,10 +10,23 @@ def custom_bool_handler(pairs):
     return {k: (str(v).lower() if isinstance(v, bool) else v) for k, v in pairs}
 
 
+def load_file(file):
+
+    file_extention = re.search('(?<=\.)[a-zA-z]{4}$', file).group(0).lower()
+
+    match file_extention:
+        case 'json':
+            return json.load(
+                    open(file), object_pairs_hook=custom_bool_handler
+                )
+        case 'yaml':
+            return yaml.safe_load(open(file))
+
+
 def generate_diff(file1, file2, _format):
 
-    file_old = json.load(open(file1), object_pairs_hook=custom_bool_handler)
-    file_new = json.load(open(file2), object_pairs_hook=custom_bool_handler)
+    file_old = load_file(file1)
+    file_new = load_file(file2)
 
     merged = file_old | file_new
     merged = json.loads(json.dumps(merged, sort_keys=True))
