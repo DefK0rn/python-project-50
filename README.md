@@ -18,5 +18,9 @@ Package has API facade and can be used by "import gendiff".
 Use option --help (-h) to know how to use it.
 
 
-## Example
+## Examples
+### JSON
 [![asciicast](https://asciinema.org/a/jTzGbuzaiQAv378z.svg)](https://asciinema.org/a/jTzGbuzaiQAv378z)
+
+### YAML
+[![asciicast](https://asciinema.org/a/qf4rhkcoidtd8ZRC.svg)](https://asciinema.org/a/qf4rhkcoidtd8ZRC)

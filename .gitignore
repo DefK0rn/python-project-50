@@ -2,3 +2,4 @@
 .ruff_cache
 asciinema
 htmlcov
+.pytest_cache
