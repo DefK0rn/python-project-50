@@ -1,0 +1,4 @@
+Property 'follow' was updated. From false to true
+Property 'proxy' was updated. From '123.234.53.22' to '123.234.53.55'
+Property 'query' was added with value: 'key=1'
+Property 'timeout' was removed

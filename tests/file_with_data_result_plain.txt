@@ -1,0 +1,3 @@
+Property 'host' was added with value: 'hexlet.io'
+Property 'timeout' was added with value: 20
+Property 'verbose' was added with value: true

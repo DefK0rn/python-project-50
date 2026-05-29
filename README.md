@@ -11,11 +11,11 @@
 
 
 ## Description
-This is a package with functionality to compare two JSON-files. To run the games you need to install package dist/hexlet_code-0.1.0-py3-none-any.whl.
+This is a package with functionality to compare two JSON-files or YAML-files. To run the games you need to install package dist/hexlet_code-0.1.0-py3-none-any.whl.
 
 Package has API facade and can be used by "import gendiff".
 
-Use option --help (-h) to know how to use it.
+Use option --help (-h) to know how to use it. For example you can get difference between two files by plain text (see examples below).
 
 
 ## Examples
@@ -24,3 +24,6 @@ Use option --help (-h) to know how to use it.
 
 ### YAML
 [![asciicast](https://asciinema.org/a/qf4rhkcoidtd8ZRC.svg)](https://asciinema.org/a/qf4rhkcoidtd8ZRC)
+
+### PLAIN style
+[![asciicast](https://asciinema.org/a/gdEIqZoqY6rinweE.svg)](https://asciinema.org/a/gdEIqZoqY6rinweE)

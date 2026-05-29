@@ -4,24 +4,27 @@ from gendiff import generate_diff
 FILE1_EMPTY = 'tests/file1_empty.json'
 FILE2_EMPTY = 'tests/file2_empty.json'
 FILE2_WITH_DATA = 'tests/file2_with_data.json'
-FILE1_TEST= 'tests/file1_test.json'
+FILE1_TEST = 'tests/file1_test.json'
 FILE2_TEST = 'tests/file2_test.json'
+FILE1_EXT = 'tests/file1_ext.json'
+FILE2_EXT = 'tests/file2_ext.json'
 FILE_EMPTY_RESULT = {
-    'TXT': 'tests/file_empty_result.txt',
-    'JSON': 'tests/file_empty_result_json.txt',
-    'YAML': 'tests/file_empty_result_yaml.txt'
+    'STYLISH': 'tests/file_empty_result.txt',
+    'PLAIN': 'tests/file_empty_result_plain.txt'
 }
 FILE_TEST_RESULT = {
-    'TXT': 'tests/file_test_result.txt',
-    'JSON': 'tests/file_test_result_json.txt',
-    'YAML': 'tests/file_test_result_yaml.txt'
+    'STYLISH': 'tests/file_test_result.txt',
+    'PLAIN': 'tests/file_test_result_plain.txt'
 }
 FILE_WITH_DATA_RESULT = {
-    'TXT': 'tests/file_with_data_result.txt',
-    'JSON': 'tests/file_with_data_result_json.txt',
-    'YAML': 'tests/file_with_data_result_yaml.txt'
+    'STYLISH': 'tests/file_with_data_result.txt',
+    'PLAIN': 'tests/file_with_data_result_plain.txt'
 }
-FORMATS = ['TXT', 'JSON', 'YAML']
+FILE_EXT_RESULT = {
+    'STYLISH': 'tests/file_ext_result.txt',
+    'PLAIN': 'tests/file_ext_result_plain.txt'
+}
+FORMATS = ['STYLISH', 'PLAIN']
 
 
 def is_equal(file, text):
@@ -34,9 +37,24 @@ def is_equal(file, text):
 
 def test():
 
-    first_files = [FILE1_EMPTY, FILE1_TEST, FILE1_EMPTY]
-    second_files = [FILE2_EMPTY, FILE2_TEST, FILE2_WITH_DATA]
-    result_files = [FILE_EMPTY_RESULT, FILE_TEST_RESULT, FILE_WITH_DATA_RESULT]
+    first_files = [
+        FILE1_EMPTY,
+        FILE1_TEST,
+        FILE1_EMPTY,
+        FILE1_EXT
+    ]
+    second_files = [
+        FILE2_EMPTY,
+        FILE2_TEST,
+        FILE2_WITH_DATA,
+        FILE2_EXT
+    ]
+    result_files = [
+        FILE_EMPTY_RESULT,
+        FILE_TEST_RESULT,
+        FILE_WITH_DATA_RESULT,
+        FILE_EXT_RESULT
+    ]
 
     for first_file, second_file, result_file in zip(first_files, second_files, result_files):
         for format in FORMATS:
