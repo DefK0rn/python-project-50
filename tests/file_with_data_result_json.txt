@@ -1,5 +1,14 @@
 {
-  "+ host": "hexlet.io",
-  "+ timeout": 20,
-  "+ verbose": "true"
+  "host": {
+    "type": "added",
+    "value": "hexlet.io"
+  },
+  "timeout": {
+    "type": "added",
+    "value": 20
+  },
+  "verbose": {
+    "type": "added",
+    "value": true
+  }
 }

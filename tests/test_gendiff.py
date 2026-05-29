@@ -10,21 +10,25 @@ FILE1_EXT = 'tests/file1_ext.json'
 FILE2_EXT = 'tests/file2_ext.json'
 FILE_EMPTY_RESULT = {
     'STYLISH': 'tests/file_empty_result.txt',
-    'PLAIN': 'tests/file_empty_result_plain.txt'
+    'PLAIN': 'tests/file_empty_result_plain.txt',
+    'JSON': 'tests/file_empty_result_json.txt'
 }
 FILE_TEST_RESULT = {
     'STYLISH': 'tests/file_test_result.txt',
-    'PLAIN': 'tests/file_test_result_plain.txt'
+    'PLAIN': 'tests/file_test_result_plain.txt',
+    'JSON': 'tests/file_test_result_json.txt'
 }
 FILE_WITH_DATA_RESULT = {
     'STYLISH': 'tests/file_with_data_result.txt',
-    'PLAIN': 'tests/file_with_data_result_plain.txt'
+    'PLAIN': 'tests/file_with_data_result_plain.txt',
+    'JSON': 'tests/file_with_data_result_json.txt'
 }
 FILE_EXT_RESULT = {
     'STYLISH': 'tests/file_ext_result.txt',
-    'PLAIN': 'tests/file_ext_result_plain.txt'
+    'PLAIN': 'tests/file_ext_result_plain.txt',
+    'JSON': 'tests/file_ext_result_json.txt'
 }
-FORMATS = ['STYLISH', 'PLAIN']
+FORMATS = ['STYLISH', 'PLAIN', 'JSON']
 
 
 def is_equal(file, text):

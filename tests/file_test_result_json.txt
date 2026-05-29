@@ -1,9 +1,24 @@
 {
-  "- follow": "false",
-  "+ follow": "true",
-  "  host": "hexlet.io",
-  "- proxy": "123.234.53.22",
-  "+ proxy": "123.234.53.55",
-  "+ query": "key=1",
-  "- timeout": 50
+  "follow": {
+    "type": "updated",
+    "old_value": false,
+    "new_value": true
+  },
+  "host": {
+    "type": "unchanged",
+    "value": "hexlet.io"
+  },
+  "proxy": {
+    "type": "updated",
+    "old_value": "123.234.53.22",
+    "new_value": "123.234.53.55"
+  },
+  "query": {
+    "type": "added",
+    "value": "key=1"
+  },
+  "timeout": {
+    "type": "removed",
+    "value": 50
+  }
 }

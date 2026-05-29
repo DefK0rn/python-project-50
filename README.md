@@ -27,3 +27,6 @@ Use option --help (-h) to know how to use it. For example you can get difference
 
 ### PLAIN style
 [![asciicast](https://asciinema.org/a/gdEIqZoqY6rinweE.svg)](https://asciinema.org/a/gdEIqZoqY6rinweE)
+
+### JSON style
+[![asciicast](https://asciinema.org/a/TSlzwR25M2Duq1M1.svg)](https://asciinema.org/a/TSlzwR25M2Duq1M1)
