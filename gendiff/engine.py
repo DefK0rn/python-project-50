@@ -3,7 +3,7 @@ import re
 
 import yaml
 
-from gendiff.renders import render_json, render_plain, render_stylish
+from gendiff.formatters.renders import render_json, render_plain, render_stylish
 
 
 def load_file(file):

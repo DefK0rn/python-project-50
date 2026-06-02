@@ -1,32 +1,32 @@
 from gendiff import generate_diff
 
 
-FILE1_EMPTY = 'tests/file1_empty.json'
-FILE2_EMPTY = 'tests/file2_empty.json'
-FILE2_WITH_DATA = 'tests/file2_with_data.json'
-FILE1_TEST = 'tests/file1_test.json'
-FILE2_TEST = 'tests/file2_test.json'
-FILE1_EXT = 'tests/file1_ext.json'
-FILE2_EXT = 'tests/file2_ext.json'
+FILE1_EMPTY = 'tests/test_data/file1_empty.json'
+FILE2_EMPTY = 'tests/test_data/file2_empty.json'
+FILE2_WITH_DATA = 'tests/test_data/file2_with_data.json'
+FILE1_TEST = 'tests/test_data/file1_test.json'
+FILE2_TEST = 'tests/test_data/file2_test.json'
+FILE1_EXT = 'tests/test_data/file1_ext.json'
+FILE2_EXT = 'tests/test_data/file2_ext.json'
 FILE_EMPTY_RESULT = {
-    'STYLISH': 'tests/file_empty_result.txt',
-    'PLAIN': 'tests/file_empty_result_plain.txt',
-    'JSON': 'tests/file_empty_result_json.txt'
+    'STYLISH': 'tests/test_data/file_empty_result.txt',
+    'PLAIN': 'tests/test_data/file_empty_result_plain.txt',
+    'JSON': 'tests/test_data/file_empty_result_json.txt'
 }
 FILE_TEST_RESULT = {
-    'STYLISH': 'tests/file_test_result.txt',
-    'PLAIN': 'tests/file_test_result_plain.txt',
-    'JSON': 'tests/file_test_result_json.txt'
+    'STYLISH': 'tests/test_data/file_test_result.txt',
+    'PLAIN': 'tests/test_data/file_test_result_plain.txt',
+    'JSON': 'tests/test_data/file_test_result_json.txt'
 }
 FILE_WITH_DATA_RESULT = {
-    'STYLISH': 'tests/file_with_data_result.txt',
-    'PLAIN': 'tests/file_with_data_result_plain.txt',
-    'JSON': 'tests/file_with_data_result_json.txt'
+    'STYLISH': 'tests/test_data/file_with_data_result.txt',
+    'PLAIN': 'tests/test_data/file_with_data_result_plain.txt',
+    'JSON': 'tests/test_data/file_with_data_result_json.txt'
 }
 FILE_EXT_RESULT = {
-    'STYLISH': 'tests/file_ext_result.txt',
-    'PLAIN': 'tests/file_ext_result_plain.txt',
-    'JSON': 'tests/file_ext_result_json.txt'
+    'STYLISH': 'tests/test_data/file_ext_result.txt',
+    'PLAIN': 'tests/test_data/file_ext_result_plain.txt',
+    'JSON': 'tests/test_data/file_ext_result_json.txt'
 }
 FORMATS = ['STYLISH', 'PLAIN', 'JSON']
 
